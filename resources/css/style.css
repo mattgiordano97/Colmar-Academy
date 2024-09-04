@@ -1,0 +1,216 @@
+/* General */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+
+}
+
+/* Header */
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+header #logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+header #logo p {
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+header #navbar ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+header #navbar a {
+    text-decoration: none;
+    color: black;
+}
+
+/* Main */
+
+
+/* Main Section 1: BANNER */
+#banner {
+    background-color: gray;
+    padding: 10px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+#banner .img-container {
+    border: 1px solid yellow;
+    width: 70%;
+}
+#banner img {
+    width: 100%;
+    height: auto;
+    /* Serve definire altezza img-container per poter avere object-fit: cover; */
+}
+#banner .text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 15px;
+    margin-left: 24px;
+}
+#banner .text-container > * {
+    display: block;
+    border: 1px solid green;
+}
+
+
+/* Main Section 2: Information */
+#information {
+    background-color: white;
+    padding: 10px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+#information .left-panel {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#information .left-panel img {
+    width: 100%;
+    height: auto;
+}
+#information .left-panel .text-container {
+
+}
+
+#information .right-panel {
+    width: 40%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+.card-small {
+    padding: 5px;
+    border: 1px solid gray;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.card-small .img-container {
+    width: 35%;
+}
+.card-small img {
+    width: 100%;
+    height: auto;
+}
+.card-small .text-container {
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+/* Main Section 3: Courses */
+#courses {
+    background-color: gray;
+}
+#courses h1 {
+
+}
+#courses .courses {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+}
+
+.card {
+    background-color: white;
+    border: 1px solid yellow;
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    height: 220px;
+}
+.card .img-container {
+    height: 50%;
+}
+.card img {
+    width: 100%;
+}
+.card .text-container {
+
+}
+
+/* Main Section 4: Thesis */
+#thesis {
+    background-color: white;
+    border-bottom: 1px solid gray;
+}
+
+#thesis .container {
+    background-color: white;
+    padding: 10px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+#thesis .left-panel {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#thesis video {
+    width: 100%;
+}
+#thesis .right-panel {
+    width: 40%;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+
+/* Footer */
+footer {
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+footer #copyright {}
+footer #terms-and-privacy a {
+    text-decoration: none;
+    color: black;
+}
