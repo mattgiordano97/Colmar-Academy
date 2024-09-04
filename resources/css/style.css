@@ -6,26 +6,42 @@
 }
 
 body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
 
+h1 {
+    font-weight: 900;
+    font-size: 1.8rem;
 }
 
 /* Header */
 header {
+    padding: 0 24px;
+    min-height: 64px;
     display: flex;
     flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 20px;
     align-items: center;
     justify-content: space-between;
 }
 header #logo {
+    height: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
-    gap: 10px;
+    flex-wrap: nowrap;
+}
+header #logo img {
+    height: 45px;
 }
 header #logo p {
     text-transform: uppercase;
     display: inline-block;
+    height: 32px;
+    line-height: 32px;
+    font-size: 1.2rem;
 }
 
 header #navbar ul {
@@ -33,7 +49,7 @@ header #navbar ul {
     list-style: none;
     justify-content: space-between;
     flex-wrap: wrap;
-    gap: 15px;
+    gap: 16px;
 }
 header #navbar a {
     text-decoration: none;
@@ -41,20 +57,23 @@ header #navbar a {
 }
 
 /* Main */
+main {
+    color: rgb(74,74,74);
+}
 
 
 /* Main Section 1: BANNER */
 #banner {
-    background-color: gray;
-    padding: 10px;
+    background-color: lightgray;
+    padding: 32px 24px;
 
     display: flex;
     flex-direction: row;
     align-items: center;
+    gap: 24px;
 }
 #banner .img-container {
-    border: 1px solid yellow;
-    width: 70%;
+    width: 60%;
 }
 #banner img {
     width: 100%;
@@ -62,27 +81,47 @@ header #navbar a {
     /* Serve definire altezza img-container per poter avere object-fit: cover; */
 }
 #banner .text-container {
+    width: 40%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
     gap: 15px;
-    margin-left: 24px;
+    
 }
 #banner .text-container > * {
     display: block;
-    border: 1px solid green;
+}
+
+#banner p {
+    font-weight: bold;
+}
+#banner a {
+    width: 90%;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    font-size: 1.2rem;
+    padding: 8px auto;
+    background-color: rgb(74, 74, 74);
+    color: white;
+    display: block;
+    text-decoration: none;
+}
+#banner a:hover {
+    border: 1px solid seashell;
 }
 
 
 /* Main Section 2: Information */
 #information {
     background-color: white;
-    padding: 10px;
+    padding: 32px 24px;
 
     display: flex;
     flex-direction: row;
     align-items: center;
+    gap: 24px;
 }
 #information .left-panel {
     width: 60%;
@@ -90,13 +129,15 @@ header #navbar a {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 32px;
 }
 #information .left-panel img {
     width: 100%;
     height: auto;
 }
-#information .left-panel .text-container {
 
+#information .left-panel .text-container p {
+    margin-top: 24px;
 }
 
 #information .right-panel {
@@ -106,10 +147,11 @@ header #navbar a {
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
+    gap: 1px;
 }
 .card-small {
-    padding: 5px;
-    border: 1px solid gray;
+    padding: 16px;
+    border: 1px solid lightgray;
 
     display: flex;
     flex-direction: row;
@@ -130,14 +172,20 @@ header #navbar a {
     flex-direction: column;
     gap: 10px;
 }
+.card-small a {
+    text-decoration: none;
+    color: cadetblue;
+}
 
 
 /* Main Section 3: Courses */
 #courses {
-    background-color: gray;
+    padding: 32px 72px;
+    background-color: lightgray;
 }
 #courses h1 {
-
+    margin-bottom: 32px;
+    text-align: center;
 }
 #courses .courses {
     display: flex;
@@ -145,32 +193,53 @@ header #navbar a {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    gap: 10px;
-    padding: 10px;
+    gap: 32px;
 }
 
 .card {
     background-color: white;
-    border: 1px solid yellow;
     display: flex;
     flex-direction: column;
-    width: 200px;
-    height: 220px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 300px;
+    height: 400px;
 }
 .card .img-container {
     height: 50%;
+
 }
 .card img {
+    height: 100%;
     width: 100%;
+    object-fit: cover;
 }
 .card .text-container {
+    padding: 16px;
+}
 
+.card .text-container > * {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.card .text-container > h4 {
+    font-size: 1.3rem;
+}
+.card .text-container > p {
+    font-weight: light;
+    font-size: 1.2rem;
 }
 
 /* Main Section 4: Thesis */
 #thesis {
+    padding: 32px 24px;
     background-color: white;
     border-bottom: 1px solid gray;
+}
+#thesis h1 {
+    margin-bottom: 32px;
+    text-align: center;
 }
 
 #thesis .container {
@@ -180,6 +249,7 @@ header #navbar a {
     display: flex;
     flex-direction: row;
     align-items: center;
+    gap: 24px;
 }
 #thesis .left-panel {
     width: 60%;
@@ -187,9 +257,14 @@ header #navbar a {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 24px;
 }
 #thesis video {
     width: 100%;
+}
+#thesis .left-panel .text-container > h3 {
+    font-size: 1.5rem;
+    margin-bottom: 8px;
 }
 #thesis .right-panel {
     width: 40%;
@@ -203,14 +278,14 @@ header #navbar a {
 
 /* Footer */
 footer {
-    padding: 10px;
+    color: gray;
+    padding: 16px 24px 30px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
 }
-footer #copyright {}
 footer #terms-and-privacy a {
     text-decoration: none;
-    color: black;
+    color: gray;
 }
