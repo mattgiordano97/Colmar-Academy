@@ -5,6 +5,10 @@
     box-sizing: border-box;
 }
 
+.mobile {
+    display: none !important;
+}
+
 body {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
@@ -55,6 +59,38 @@ header #navbar a {
     text-decoration: none;
     color: black;
 }
+
+
+@media only screen and (max-width: 480px) {
+    section {
+        border-bottom: 1px solid lightgray;
+    }
+
+    .desktop {
+        display: none !important;
+    }
+    .mobile.flex {
+        display: flex !important;
+    }
+    header {
+        display: block;
+        
+        height: 64px;
+    }
+    #navbar {
+        width: 100%;
+        height: 100%;
+    }
+    #navbar ul {
+        height: 100%;
+        align-items: center;
+        justify-content: space-around;
+    }
+    #navbar ul img {
+        height: 35px;
+    }
+}
+
 
 /* Main */
 main {
@@ -110,6 +146,33 @@ main {
 }
 #banner a:hover {
     border: 1px solid seashell;
+}
+
+
+@media only screen and (max-width: 480px) {
+    #banner {
+        padding: 0;
+        flex-direction: column;
+    }
+    #banner .img-container {
+        width: 100%;
+        height: auto;
+    }
+    #banner .text-container {
+        padding: 32px 16px;
+        width: 100%;
+        height: auto;
+        align-items: center;
+    }
+    #banner .text-container h1 {
+        margin-bottom: 32px;
+    }
+    #banner .text-container p {
+        margin-bottom: 24px;
+    }
+    #banner .text-container a {
+        width: 100%;
+    }
 }
 
 
@@ -177,6 +240,55 @@ main {
     color: cadetblue;
 }
 
+@media only screen and (max-width: 480px) {
+    #information {
+        display: block;
+        padding: 16px 16px 32px;
+    }
+    #information .right-panel {
+        width: 100%;
+        gap: 64px;
+    }
+
+    .card-small {
+        border: none;
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0;
+    }
+    
+    .card-small .text-container {
+        width: 65%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .card-small .img-container {
+        width: 100%;
+        height: 150px;
+    }
+    
+    .card-small img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    .card-small .text-container {
+        margin-left: 16px;
+        width: 65%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .card-small a {
+        text-decoration: none;
+        color: cadetblue;
+    }
+}
 
 /* Main Section 3: Courses */
 #courses {
@@ -231,6 +343,47 @@ main {
     font-size: 1.2rem;
 }
 
+
+@media only screen and (max-width: 480px) {
+
+    #courses {
+        padding: 32px 16px;
+        background-color: white;
+    }
+
+    #courses h1 {
+        margin-bottom: 16px;
+        text-align: center;
+    }
+
+    #courses .courses {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+    }
+
+    .card {
+        background-color: lightgray;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        width: 100%;
+        height: 100px;
+    }
+
+    .card .text-container {
+        padding: 16px 16px 24px;
+    }
+
+    .card .text-container > h4 {
+        font-size: 1.3rem;
+    }
+}
+
+
 /* Main Section 4: Thesis */
 #thesis {
     padding: 32px 24px;
@@ -276,6 +429,32 @@ main {
 }
 
 
+@media only screen and (max-width: 480px) {
+    #thesis {
+        padding: 32px 0 24px;
+    }
+
+    #thesis h1 {
+        margin-bottom: 16px;
+    }
+
+    #thesis .container {
+        padding: 0;
+        display: block;
+    }
+
+    #thesis .left-panel {
+        width: 100%;
+        display: block;
+        flex-direction: column;
+    }
+
+    #thesis video {
+        width: 100%;
+    }
+}
+
+
 /* Footer */
 footer {
     color: gray;
@@ -289,3 +468,12 @@ footer #terms-and-privacy a {
     text-decoration: none;
     color: gray;
 }
+
+@media only screen and (max-width: 480px) {
+    footer {
+        padding: 16px;
+    }
+}
+
+
+/*********************************************/
